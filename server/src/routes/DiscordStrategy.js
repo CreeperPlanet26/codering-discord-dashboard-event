@@ -6,8 +6,8 @@ passport.use(
     {
       clientID: process.env.CLIENT_ID,
       clientSecret: process.env.CLIENT_SECRET,
-      callbackURL: 'http://localhost:5000/api/login/redirect',
-      scope: ['identify', 'applications.builds.read'],
+      callbackURL: process.env.CLIENT_CALLBACK_URL,
+      scope: ['identify'],
     },
   ),
 );
